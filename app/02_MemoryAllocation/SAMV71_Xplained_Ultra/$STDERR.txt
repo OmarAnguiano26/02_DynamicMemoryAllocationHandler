@@ -1,0 +1,16 @@
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c: In function '_Button1_Handler':
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c:162:16: error: 'pinPB1' undeclared (first use in this function)
+  if ( pPin == &pinPB1 ) {
+                ^
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c:162:16: note: each undeclared identifier is reported only once for each function it appears in
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c: In function '_Button2_Handler':
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c:174:16: error: 'pinPB2' undeclared (first use in this function)
+  if ( pPin == &pinPB2 ) {
+                ^
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c: In function '_ConfigureButtons':
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c:188:18: error: 'pinPB1' undeclared (first use in this function)
+  PIO_Configure( &pinPB1, 1 ) ;
+                  ^
+C:\SAMv7\SAMx_713\SAMx\SAMV7x\SAMV71x\app\getting_started\src\main.c:189:18: error: 'pinPB2' undeclared (first use in this function)
+  PIO_Configure( &pinPB2, 1 ) ;
+                  ^
