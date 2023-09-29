@@ -336,6 +336,7 @@ __STATIC_INLINE void TCM_Disable(void)
 void Reset_Handler(void)
 {
 		uint32_t *pSrc, *pDest;
+		uint32_t *pheap;
 
 		/* Initialize the relocate segment */
 		pSrc = &_etext;
@@ -350,6 +351,11 @@ void Reset_Handler(void)
 		/* Clear the zero segment */
 		for (pDest = &_szero; pDest < &_ezero;) {
 				*pDest++ = 0;
+		}
+		/**Clear heap*/
+		for (pheap = &_heap_mem_start; pheap < &_heap_mem_end;) 
+		{
+			*pheap++ = 0;
 		}
 
 		/* Set the vector table base address */
