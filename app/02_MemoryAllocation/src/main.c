@@ -94,6 +94,8 @@
  *        Local definitions
  *----------------------------------------------------------------------------*/
 
+#define NO_PUSHBUTTON
+
 /** IRQ priority for PIO (The lower the value, the greater the priority) */
 #define IRQ_PRIOR_PIO    0
 
