@@ -133,6 +133,15 @@ SECTIONS
         _eheap = .;
     } > ram
 
+    .heap_mem :
+    {
+        . = ALIGN(8);
+        _heap_mem_start = .;
+        . = . + heap_memsize;
+        . = ALIGN(8);
+        _heap_mem_end = .;
+    } > heap_memalloc
+
     . = ALIGN(4);
     _end = . ;
     _ram_end_ = ORIGIN(ram) + LENGTH(ram) -1 ;
