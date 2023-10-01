@@ -314,9 +314,12 @@ extern int main( void )
 	MemHandlerType Mem_Init;
 	MemReturnType *p1;
 	
-	p1 =  Mem_Alloc( 32 );
-	p1 =  Mem_Alloc( 33 );
-	p1 =  Mem_Alloc( 0x5000);
+	p1 =  Mem_Alloc( 4000 );
+	printf("Address: %x\n\r", p1);
+	p1 =  Mem_Alloc( 95 );
+	printf("Address: %x\n\r", p1);
+	p1 =  Mem_Alloc( 5);
+	printf("Address: %x\n\r", p1);
 
 	while ( 1 ) 
 	{
