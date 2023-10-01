@@ -1,4 +1,0 @@
-D:\SAMV71x\app\02_DynamicMemoryAllocationHandler\app\02_MemoryAllocation\src\Mem_Alloc.c:25:5: error: initializer element is not constant
-     };
-     ^
-D:\SAMV71x\app\02_DynamicMemoryAllocationHandler\app\02_MemoryAllocation\src\Mem_Alloc.c:25:5: error: (near initialization for 'MemControl.FreeBytes')

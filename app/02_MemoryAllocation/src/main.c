@@ -314,6 +314,8 @@ extern int main( void )
 	MemHandlerType Mem_Init;
 	MemReturnType *p1;
 	
+	p1 =  Mem_Alloc( 10 );
+	printf("Address: %x\n\r", p1);
 	p1 =  Mem_Alloc( 100 );
 	printf("Address: %x\n\r", p1);
 	p1 =  Mem_Alloc( 95 );
