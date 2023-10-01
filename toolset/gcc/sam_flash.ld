@@ -133,7 +133,7 @@ SECTIONS
         _eheap = .;
     } > ram
 
-    .heap_mem :
+    .heap_mem : 
     {
         . = ALIGN(8);
         _heap_mem_start = .;

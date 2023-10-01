@@ -89,6 +89,7 @@
 #include "board.h"
 #include <stdbool.h>
 #include <stdio.h>
+#include "Mem_Alloc.h"
 
 /*----------------------------------------------------------------------------
  *        Local definitions
@@ -310,40 +311,8 @@ extern int main( void )
 	SCB_EnableICache();
 //	SCB_EnableDCache();
 
-	/* Configure systick for 1 ms. */
-	TimeTick_Configure ();
+	while ( 1 ) 
+	{
 
-	printf( "Configure LED PIOs.\n\r" ) ;
-	_ConfigureLeds() ;
-
-	printf( "Configure TC.\n\r" );
-	_ConfigureTc() ;
-
-#ifndef NO_PUSHBUTTON
-	printf( "Configure buttons with denouncing.\n\r" ) ;
-	_ConfigureButtons() ;
-	printf( "Press USRBP1 to Start/Stop the blue LED D1 blinking.\n\r" ) ;
-	printf( "Press USRBP2 to Start/Stop the red LED D2 blinking.\n\r" ) ;
-
-#else
-	printf( "No push buttons, uses DBG key 1 & 2 instead.\n\r" ) ;
-	printf( "Press 1 to Start/Stop the blue LED D1 blinking.\n\r" ) ;
-	printf( "Press 2 to Start/Stop the red LED D2 blinking.\n\r" ) ;
-
-#endif
-
-	while ( 1 ) {
-		/* Wait for LED to be active */
-		while( !bLed0Active );
-
-		/* Toggle LED state if active */
-		if ( bLed0Active ) {
-			LED_Toggle( 0 );
-			printf( "1 " );
-      ig_test++;
-		}
-
-		/* Wait for 500ms */
-		Wait(1000);
 	}
 }

@@ -29,6 +29,7 @@
 
 
 #include "samv71.h"
+#include "Mem_Alloc.h"
 
 /* Initialize segments */
 extern uint32_t _sfixed;
@@ -352,6 +353,8 @@ void Reset_Handler(void)
 		for (pDest = &_szero; pDest < &_ezero;) {
 				*pDest++ = 0;
 		}
+
+		
 		/**Clear heap*/
 		for (pheap = &_heap_mem_start; pheap < &_heap_mem_end;) 
 		{

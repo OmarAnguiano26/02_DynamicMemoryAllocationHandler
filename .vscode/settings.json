@@ -1,6 +1,8 @@
 {
     "C_Cpp.errorSquiggles": "disabled",
     "files.associations": {
-        "*.ld": "c"
+        "*.ld": "c",
+        "mem_alloc.h": "c",
+        "mem_alloctypes.h": "c"
     }
 }
