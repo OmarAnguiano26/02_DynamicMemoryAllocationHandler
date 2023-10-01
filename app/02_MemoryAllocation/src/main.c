@@ -311,6 +311,8 @@ extern int main( void )
 	SCB_EnableICache();
 //	SCB_EnableDCache();
 
+	MemHandlerType Mem_Init;
+
 	while ( 1 ) 
 	{
 

@@ -13,21 +13,22 @@
 
     extern uint32_t _heap_mem_start;
     extern uint32_t _heap_mem_end;
+    uint32_t heapsize = (uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start;
 
-   static const MemHandlerType MemControl =
+    MemHandlerType MemControl =
     {
         .MemStart = (uint8_t *) &_heap_mem_start, /* Sets the start of the heap memory */
         .MemEnd = (uint8_t *) &_heap_mem_end, /* Sets the end of the heap memory */
         .CurrAddr = (uint8_t *) &_heap_mem_start, /* Initialize the current start address */
-        .FreeBytes = (uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start /* Sets the size of the heap memory */
+        .FreeBytes = heapsize//(uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start /* Sets the size of the heap memory */
     };
 
 MemReturnType Mem_Alloc ( MemSizeType Size )
 {
     if(Size > MemControl.FreeBytes)/**No more free bytes on heap*/
     {
-        return NULL;
+        return 0;
     }
-    MemReturnType *ptr = .CurrAddr;
+    MemReturnType *ptr = MemControl.CurrAddr;
 }
 
