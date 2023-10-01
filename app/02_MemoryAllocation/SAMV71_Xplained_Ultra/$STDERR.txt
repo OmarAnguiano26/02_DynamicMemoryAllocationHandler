@@ -1,0 +1,4 @@
+C:\Samv7_02\SAMV7x\SAMV71x\app\02_MemoryAllocation\src\Mem_Alloc.c:26:5: error: initializer element is not constant
+     };
+     ^
+C:\Samv7_02\SAMV7x\SAMV71x\app\02_MemoryAllocation\src\Mem_Alloc.c:26:5: error: (near initialization for 'MemControl.FreeBytes')

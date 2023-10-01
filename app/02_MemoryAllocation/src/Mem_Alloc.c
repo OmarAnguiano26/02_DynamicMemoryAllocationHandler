@@ -15,14 +15,13 @@
     extern uint32_t _heap_mem_start;
     extern uint32_t _heap_mem_end;
     extern uint32_t _heap_mem_size;
-    //uint32_t heapsize = (uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start;
 
     MemHandlerType MemControl =
     {
         .MemStart = (uint8_t *) &_heap_mem_start, /* Sets the start of the heap memory */
         .MemEnd = (uint8_t *) &_heap_mem_end, /* Sets the end of the heap memory */
         .CurrAddr = (uint8_t *) &_heap_mem_start, /* Initialize the current start address */
-        .FreeBytes = 0x1000//(uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start /* Sets the size of the heap memory */
+        .FreeBytes = (uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start /* Sets the size of the heap memory */
     };
 
 MemReturnType Mem_Alloc ( MemSizeType Size )
