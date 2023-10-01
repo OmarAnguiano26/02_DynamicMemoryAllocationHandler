@@ -42,7 +42,7 @@ MEMORY
 {
   rom (rx)  :           ORIGIN = 0x00400000, LENGTH = 0x00200000
   heap_memalloc(rwx) :  ORIGIN = 0x20400000, LENGTH = 0x00010000 /*64K*/
-  ram (rwx) :           ORIGIN = 0x20400000, LENGTH = 0x00060000
+  ram (rwx) :           ORIGIN = 0x20410000, LENGTH = 0x00050000
   sdram(rwx):           ORIGIN = 0x70000000, LENGTH = 0x00200000
 }
 

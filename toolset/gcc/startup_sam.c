@@ -43,6 +43,7 @@ extern uint32_t _sstack;
 extern uint32_t _estack;
 extern uint32_t _heap_mem_start;
 extern uint32_t _heap_mem_end;
+extern uint32_t _heap_mem_size;
 
 /** \cond DOXYGEN_SHOULD_SKIP_THIS */
 int main(void);

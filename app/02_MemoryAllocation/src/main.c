@@ -312,6 +312,11 @@ extern int main( void )
 //	SCB_EnableDCache();
 
 	MemHandlerType Mem_Init;
+	MemReturnType *p1;
+	
+	p1 =  Mem_Alloc( 32 );
+	p1 =  Mem_Alloc( 33 );
+	p1 =  Mem_Alloc( 0x5000);
 
 	while ( 1 ) 
 	{

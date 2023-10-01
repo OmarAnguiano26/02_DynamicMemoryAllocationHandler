@@ -15,11 +15,13 @@
 /*****************************************************************************************************
 * Declaration of module wide TYPES
 *****************************************************************************************************/
-//#define MemSizeType     uint16_t
-//#define MemReturnType   void
+#define MemSizeType     uint16_t
+#define MemReturnType   void*
 
-typedef uint16_t    MemSizeType;
-typedef void        MemReturnType;
+
+//typedef uint16_t    MemSizeType;
+//typedef void        MemReturnType;
+
 
 typedef struct 
 {
