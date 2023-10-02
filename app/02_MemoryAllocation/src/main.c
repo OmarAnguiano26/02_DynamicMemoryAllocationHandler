@@ -314,13 +314,19 @@ extern int main( void )
 	MemHandlerType Mem_Init;
 	MemReturnType *p1;
 	
-	p1 =  Mem_Alloc( 10 );
+	p1 =  Mem_Alloc( 1 );
 	printf("Address: %x\n\r", p1);
 	p1 =  Mem_Alloc( 100 );
 	printf("Address: %x\n\r", p1);
 	p1 =  Mem_Alloc( 95 );
 	printf("Address: %x\n\r", p1);
-	p1 =  Mem_Alloc( 50);
+	p1 =  Mem_Alloc( 50 );
+	printf("Address: %x\n\r", p1);
+	p1 =  Mem_Alloc( 3000 );
+	printf("Address: %x\n\r", p1);
+	p1 =  Mem_Alloc( 1 );
+	printf("Address: %x\n\r", p1);
+	p1 =  Mem_Alloc( 1000 ); /**Overflow heap*/
 	printf("Address: %x\n\r", p1);
 
 	while ( 1 ) 

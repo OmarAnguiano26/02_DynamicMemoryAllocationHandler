@@ -15,6 +15,7 @@
 extern uint32_t _heap_mem_start;
 extern uint32_t _heap_mem_end;
 extern uint32_t _heap_mem_size;
+uint8_t init = 0;
 
 
 MemHandlerType MemControl =
@@ -27,6 +28,11 @@ MemHandlerType MemControl =
 
 MemReturnType Mem_Alloc ( MemSizeType Size )
 {
+    if(init == 0) /**Initializes Freebytes value as the variable cannot be initialized by other variable*/
+    {
+        MemControl.FreeBytes = (uint8_t *) &_heap_mem_end - (uint8_t *) &_heap_mem_start;
+        init++;
+    }
     if(Size > MemControl.FreeBytes) /**No more free bytes on heap*/
     {
         return NULL;

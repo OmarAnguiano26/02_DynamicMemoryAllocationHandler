@@ -1,12 +1,10 @@
-INITIALIZING	Emulator: EDBG CMSIS-DAP   Debugger: On-chip
-CONVERTING	D:\SAMV71x\app\02_DynamicMemoryAllocationHandler\app\02_MemoryAllocation\SAMV71_Xplained_Ultra\Debug\getting_started.elf
-LOADING	D:\SAMV71x\app\02_DynamicMemoryAllocationHandler\app\02_MemoryAllocation\SAMV71_Xplained_Ultra\Debug\getting_started.elf
+CONVERTING	C:\Samv7_02\SAMV7x\SAMV71x\app\02_MemoryAllocation\SAMV71_Xplained_Ultra\Debug\getting_started.elf
+LOADING	C:\Samv7_02\SAMV7x\SAMV71x\app\02_MemoryAllocation\SAMV71_Xplained_Ultra\Debug\getting_started.elf
 ANALYZING
 ANALYZING
 EMULATION	POD: Cortex (JTAG,SWD)   CPU: Cortex-M7
 DEBUG	PROTOCOL: SWD; RESET: SoC
-CPU	CPUID=0x410FC271 (M7 variant 0, revision 1)
-LOADING 	41148 bytes
+LOADING 	41164 bytes
 UMI INFO	Loading UMI monitor...
 PROGRAMMING	Atmel ATSAMV7 (2048 kB) (3 sectors)
 UMI INFO	Unloading UMI monitor...
